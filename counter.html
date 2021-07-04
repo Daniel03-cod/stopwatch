@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STOP WATCH</title>
+	<link rel="stylesheet" type="text/css" href="counter.css">
+</head>
+<body>
+    <center>
+    <div id="frame">
+        <center>
+            <table>
+        <h1 style="color: yellow;">STOP WATCH</h1>
+        <tr>
+            <td><input type="text" placeholder="hours" id="hr" value="0" disabled></td>
+            <td><input type="text" placeholder="minutes" id="mn" value="0" disabled></td>
+            <td><input type="text" placeholder="seconds" id="sec" value="0" disabled></td>
+            <td><h1><p id="timeup"></p></h1></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="countDown()" id="Beginbtn">Begin</button>
+                <button onclick="reset()" id="lapbtn">=></button><br>
+                <button onclick="stop()" id="pausebtn">Pause</button>
+                <button onclick="laps()" id="resetbtn">Reset</button>
+            </td>
+            <td></td>
+        </tr>
+            </table>
+        </center>
+    </div>
+</center>
+
+	<center>
+		<div id="lapshow">
+		
+		</div>
+	</center>
+	
+
+    <script>
+        var seconds;
+        var minutes;
+        var hours;
+       	var t;
+        // var zero = 0;
+        function countDown(){
+            seconds = sec.value;
+            seconds++;
+            sec.value = seconds;
+            if(seconds < 59){
+                t = setTimeout(countDown,10)
+            }
+             else{
+                minutes = mn.value;
+                if(minutes >= 0){
+                minutes++;
+                mn.value = minutes;
+                seconds = -1;
+                seconds++;
+                sec.value = seconds;
+                t = setTimeout(countDown,100)
+               }
+                else{
+                	  hours = hr.value;
+                	  if(mn.value == 60 || hours >= 0){
+                      hours++;
+                      hr.value = hours;
+                      minutes = -1;
+                      minutes++;
+                      mn.value = minutes
+                      seconds = -1;
+                      seconds++;
+                      sec.value = seconds;
+                      t = setTimeout(countDown,100);
+                 	}
+                }
+         }
+          
+        }
+        function reset(){
+            var database = [];
+            database.push(hr.value +  ":"  +mn.value +  ":"  + sec.value);
+            lapshow.innerHTML += database;
+            lapshow.innerHTML += "<br>";
+        }
+        function stop(){
+        	clearTimeout(t);
+        }
+        function laps(){
+        	seconds = 0;
+            sec.value = seconds;
+            minutes = 0;
+            mn.value = minutes;
+            hours = 0;
+            hr.value = hours;
+            lapshow.innerHTML = null;
+        }
+    </script>
+
+</body>
+</html>

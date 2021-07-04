@@ -1,0 +1,85 @@
+body{
+	background-color: black;
+}
+button{
+	margin-left: 20px;
+	margin-top: 20px; 
+}
+#lapshow{
+	border: 2px solid dodgerblue;
+	width: 30%;
+	height: 325px;
+	background-color: white;
+	font-size: 30px;
+	font-family: verdana;
+	wind:right 20ms;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+#frame{
+	border: 2px solid dodgerblue;
+	width: 30%;
+	background-color: dodgerblue;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+}
+#hr{
+	width: 30%;
+	height: 40px;
+	border-radius: 50px;
+	margin-left: 80px;
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+}
+#mn{
+	width: 50%;
+	height: 40px;
+	border-radius: 50px;
+	margin-left: 10px;
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+}
+#sec{
+	width: 30%;
+	height: 40px;
+	border-radius: 50px;
+	margin-right: 70px;
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+}
+#Beginbtn{
+	height: 50px;
+	width: 80px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-family: verdana;
+	margin-left: -60px;
+}
+#lapbtn{
+	height: 50px;
+	width: 80px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-family: verdana;
+	margin-right: -60px;
+}
+#pausebtn{
+	height: 50px;
+	width: 80px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-family: verdana;
+	margin-left: -60px;
+}
+#resetbtn{
+	height: 50px;
+	width: 80px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-family: verdana;
+	margin-right: -60px;
+}
